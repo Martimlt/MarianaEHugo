@@ -1,0 +1,85 @@
+{% extends 'MarianaEHugo/layout.html' %} 
+{% block main %} 
+{% load static %}
+
+<div class="hero-container">
+    <div class="hero-image" id="heroImage">
+        <img src="{% static 'MarianaEHugo/images/Imagem1.jpg' %}" alt="Image 1" class="slide">
+        <img src="{% static 'MarianaEHugo/images/Imagem2.jpg' %}" alt="Image 2" class="slide">
+        <img src="{% static 'MarianaEHugo/images/Imagem3.jpg' %}" alt="Image 3" class="slide">
+    </div>
+
+    <div class="hero-titles">
+        <h2 class="centered-title">Mariana & Hugo</h2>
+        <h3 class="centered-subtitle">O Grande Dia!</h3>
+    </div>
+
+    <button id="prevBtn" class="nav-btn">❮</button>
+    <button id="nextBtn" class="nav-btn">❯</button>
+</div>
+<div class="centered-text">
+    <p class="big-text">17 de Julho de 2024</p>
+</div>
+
+<div id="countdown">
+    <div id="months"><span id="months-number">00</span> Months</div>
+    <div id="days"><span id="days-number">00</span> Days</div>
+    <div id="hours"><span id="hours-number">00</span> Hours</div>
+    <div id="minutes"><span id="minutes-number">00</span> Minutes</div>
+    <div id="seconds"><span id="seconds-number">00</span> Seconds</div>
+</div>
+<div class="box1">
+    <div class="text-section">
+        <p>Your text goes here. This is the left side of the box.</p>
+    </div>
+    <div class="image-section">
+        <img src="{% static 'MarianaEHugo/images/Image4.jpg' %}" alt="Your Image Description">
+    </div>
+</div>
+<div class="boxes-container">
+    <div class="box">
+        <p>Your text for the first box goes here.</p>
+    </div>
+    <div class="box">
+        <p>Your text for the second box goes here.</p>
+    </div>
+</div>
+<div class="gifts-section">
+    <h2 class="gifts-title">Prendas</h2>
+    <p class="gifts-text">
+        Here is some information about the gifts...
+    </p>
+</div>
+<div class="rsvp-form-container">
+    <h2>Confirme sua Presença</h2>
+    {% if success %}
+        <p>Obrigado por confirmar sua presença!</p>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+
+        <!-- Attendance Checkbox -->
+        <div class="form-field checkbox-container">
+            <label for="{{ form.attending.id_for_label }}" class="checkbox-label">{{ form.attending.label }} {{ form.attending }}</label>
+        </div>
+
+        <!-- Other Fields -->
+        <div class="form-field">
+            <label for="{{ form.name.id_for_label }}">{{ form.name.label }}</label>
+            {{ form.name }}
+        </div>
+
+        <div class="form-field">
+            <label for="{{ form.dietary_restrictions.id_for_label }}">{{ form.dietary_restrictions.label }}</label>
+            {{ form.dietary_restrictions }}
+        </div>
+
+        <div class="form-field">
+            <label for="{{ form.observations.id_for_label }}">{{ form.observations.label }}</label>
+            {{ form.observations }}
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+{% endblock %}

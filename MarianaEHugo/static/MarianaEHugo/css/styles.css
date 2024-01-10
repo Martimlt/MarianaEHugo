@@ -1,0 +1,322 @@
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+}
+  
+.active {
+    color: black;
+    font-weight: bold !important;
+}
+
+/* Top bar */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    height: 80px;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures that the topbar stretches across the full width of the viewport */
+    z-index: 1000; /* Ensures that the topbar is above other content */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo span {
+    margin-left: 20px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+}
+
+.logo img {
+    height: 60px;
+    margin-left: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    margin: 0px 16px;
+}
+
+.navbar a:hover {
+    color: black;
+}
+
+/* Home */
+
+/* Hero images */
+
+.hero-container {
+    padding-top: 80px;
+    position: relative;
+    width: 100%;
+    height: 92vh;
+    overflow: hidden;
+}
+
+.hero-image {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    filter: brightness(50%)
+}
+
+.slide {
+    min-width: 100%;
+    height: 92vh;
+    object-fit: cover;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#prevBtn {
+    left: 5px;
+}
+
+#nextBtn {
+    right: 5px;
+}
+
+/* text home page */
+
+.hero-titles {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* or any color that suits your design */
+}
+
+.centered-title {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    margin: 0px;
+    color: white;
+}
+
+.centered-subtitle {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin: 12px;
+    color: white;
+}
+
+/* Date */
+
+.centered-text {
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
+
+.big-text {
+    font-size: 40px; /* Increase the font size, adjust as needed */
+}
+
+/* Countdown */
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: -50px;
+    padding: 20px;
+}
+
+#countdown > div {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#countdown span {
+    display: block;
+    font-size: 4em; /* Increase the font size here */
+    color: #AC9362;
+}
+
+
+/* Image and description */
+
+.box1 {
+    display: flex;
+    align-items: stretch;
+    width: 35%; 
+    margin: auto; 
+    padding: 20px; 
+}
+
+.text-section {
+    flex: 1; 
+    background-color: #AC9362; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px; 
+}
+
+.image-section {
+    flex: 1; 
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+/* Boxes info */
+
+.boxes-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 400px;
+}
+
+.box {
+    flex: 1;
+    border: 1px solid #AC9362;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.box p {
+    margin: 0;
+}
+
+/* Gifts */
+
+.gifts-section {
+    text-align: center; 
+    padding: 20px; 
+}
+
+.gifts-title {
+    display: inline-block;
+    margin: 0px;
+    margin-left: -20%; 
+
+}
+
+.gifts-text {
+    /* Add styling for your text here */
+    /* This text will be centered within the section */
+}
+
+/* Form */
+
+.rsvp-form-container {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #AC9362;
+    border-radius: 10px;
+    width: 30%; /* Adjust the width as needed */
+    background-color: #f2f2f2;
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.rsvp-form-container form {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.rsvp-form-container input[type="text"],
+.rsvp-form-container input[type="email"],
+.rsvp-form-container textarea {
+    width: 100%; /* Full width of the parent container */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #AC9362;
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.rsvp-form-container button {
+    background-color: #AC9362;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Full width */
+}
+
+.rsvp-form-container button:hover {
+    background-color: darken(#AC9362, 10%);
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.checkbox-label {
+    flex: 1;
+}
+
+.rsvp-form-container input[type="checkbox"] {
+    flex: 0; /* Do not grow, stay the size of the checkbox */
+}
+
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 768px) {
+    .rsvp-form-container {
+        width: 90%; /* Wider width on smaller screens */
+    }
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
