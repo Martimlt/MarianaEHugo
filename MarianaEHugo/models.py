@@ -2,6 +2,7 @@ from django.db import models
 
 class RSVP(models.Model):
     attending = models.BooleanField()
+    not_attending = models.BooleanField()
     name = models.TextField(max_length=500)
     dietary_restrictions = models.TextField(blank=True)
     observations = models.TextField(blank=True)

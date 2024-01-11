@@ -22,11 +22,11 @@
 </div>
 
 <div id="countdown">
-    <div id="months"><span id="months-number">00</span> Months</div>
-    <div id="days"><span id="days-number">00</span> Days</div>
-    <div id="hours"><span id="hours-number">00</span> Hours</div>
-    <div id="minutes"><span id="minutes-number">00</span> Minutes</div>
-    <div id="seconds"><span id="seconds-number">00</span> Seconds</div>
+    <div id="months"><span id="months-number">00</span> Meses</div>
+    <div id="days"><span id="days-number">00</span> Dias</div>
+    <div id="hours"><span id="hours-number">00</span> Horas</div>
+    <div id="minutes"><span id="minutes-number">00</span> Minutos</div>
+    <div id="seconds"><span id="seconds-number">00</span> Segundos</div>
 </div>
 <div class="box1">
     <div class="text-section">
@@ -38,20 +38,40 @@
 </div>
 <div class="boxes-container">
     <div class="box">
-        <p>Your text for the first box goes here.</p>
+        <h1 style="margin-top: 0px;">Cerimónia</h1>
+        <i class="fa-solid fa-church button1" style="margin-bottom: 5px;"></i>
+        <h2 style="margin: 2px;">Igreja Paroquial de Olhalvo</h2>
+        <a href="https://maps.app.goo.gl/1QLZpdz78gpi2QEEA?g_st=iw" style="text-decoration: none; color: black;" target="_blank"><h3>Morada: R. Francisco de Goes 36, Olhalvo <i class="fa-solid fa-location-dot"></i></h3></a>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12385.403225911728!2d-9.072941461437981!3d39.09848271511715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd18d1aec383444b%3A0xab0fc87d295e4455!2sIgreja%20Paroquial%20de%20Olhalvo!5e0!3m2!1spt-PT!2sus!4v1704935101775!5m2!1spt-PT!2sus" width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="box">
-        <p>Your text for the second box goes here.</p>
+        <h1 style="margin-top: 0px;">Quinta/Copo d'água</h1>
+        <img src="{% static 'MarianaEHugo/images/Logo2.png' %}" alt="Image 1" class="button2">
+        <h2 style="margin: 5px;">Quinta da bichinha</h2>
+        <a href="https://maps.app.goo.gl/iqZPDNNiEQbE7sXC8?g_st=ic" style="text-decoration: none; color: black;" target="_blank"><h3>Morada: Estr. de Vila Chã, 2580-413 <i class="fa-solid fa-location-dot"></i></h3></a>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12382.629538784364!2d-9.123303446618658!3d39.11426977864886!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd18d20da729703b%3A0x4fb06c522be22608!2sQuinta%20da%20Bichinha!5e0!3m2!1spt-PT!2sus!4v1704934510216!5m2!1spt-PT!2sus" width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
 <div class="gifts-section">
     <h2 class="gifts-title">Prendas</h2>
     <p class="gifts-text">
-        Here is some information about the gifts...
+        Caros amigos e familiares,
     </p>
+    <p class="gifts-text">
+        A vossa presença no nosso dia especial é o maior presente que nos podem dar. Se desejarem expressar os vossos bons desejos, ficaríamos gratos por qualquer contribuição para a nossa viagem de lua de mel. Para tornar mais fácil, disponibilizamos o nosso IBAN para aqueles que preferirem contribuir online antes do grande dia. Agradecemos desde já o vosso carinho e apoio.
+
+    </p>
+    <p class="gifts-text">
+        IBAN: <b>PT50.0036.0144.99100047683.29</b>
+    </p>
+    <p class="gifts-text">
+        Com amor,<br>
+        Mariana e Hugo
+    </p>
+
 </div>
 <div class="rsvp-form-container">
-    <h2>Confirme sua Presença</h2>
+    <h1>Confirme sua Presença</h1>
     {% if success %}
         <p>Obrigado por confirmar sua presença!</p>
     {% endif %}
@@ -60,7 +80,7 @@
 
         <!-- Attendance Checkbox -->
         <div class="form-field checkbox-container">
-            <label for="{{ form.attending.id_for_label }}" class="checkbox-label">{{ form.attending.label }} {{ form.attending }}</label>
+            <label for="{{ form.attending.id_for_label }}" class="checkbox-label">Confirmação de Presença: &nbsp; &nbsp; {{ form.attending.label }} {{ form.attending }} &nbsp; &nbsp; {{ form.not_attending.label }} {{ form.not_attending }}</label>
         </div>
 
         <!-- Other Fields -->
@@ -81,5 +101,11 @@
 
         <button type="submit">Enviar</button>
     </form>
+</div>
+<div style="background-color: #AC9362; margin-bottom: 0px;">
+    <h1 class="title-cont">Contacto</h1>
+    <p class="cont-text">Caso necessite de alguma informação, não hesite em contactar!</p>
+    <p class="cont-text" style="margin-bottom: 0px;">Mariana: +351 931 355 012</p>
+    <p class="cont-text" style="margin-top: 0px; padding-bottom: 20px;">Hugo: +351 XXX XXX XXX</p>
 </div>
 {% endblock %}
