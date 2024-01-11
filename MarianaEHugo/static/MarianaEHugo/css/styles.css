@@ -409,7 +409,7 @@ body {
 }
 
 .rsvp-form-container input[type="checkbox"] {
-    flex: 0; /* Do not grow, stay the size of the checkbox */
+    flex: 0;
 }
 
 
@@ -433,26 +433,25 @@ body {
 
 @media screen and (max-width: 1500px) {
     .rsvp-form-container {
-        width: 40%; /* Wider width on smaller screens */
+        width: 40%;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .rsvp-form-container {
-        width: 60%; /* Wider width on smaller screens */
+        width: 60%;
     }
 }
 
 @media screen and (max-width: 768px) {
     .rsvp-form-container {
-        width: 70%; /* Wider width on smaller screens */
+        width: 70%;
     }
 }
 
-/* Responsive styling for smaller screens */
 @media screen and (max-width: 600px) {
     .rsvp-form-container {
-        width: 90%; /* Wider width on smaller screens */
+        width: 90%;
     }
 }
 
