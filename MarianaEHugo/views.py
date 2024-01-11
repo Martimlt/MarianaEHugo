@@ -6,7 +6,6 @@ def home_page_view(request):
         form = RSVPForm(request.POST)
         if form.is_valid():
             form.save()
-            # You can add a message or redirect to a thank you section on the same page
             return render(request, 'MarianaEHugo/home.html', {'form': RSVPForm(), 'success': True})
     else:
         form = RSVPForm()
