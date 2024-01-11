@@ -79,8 +79,12 @@
         {% csrf_token %}
 
         <!-- Attendance Checkbox -->
-        <div class="form-field checkbox-container">
+        <div class="form-field checkbox-container hidefirst">
             <label for="{{ form.attending.id_for_label }}" class="checkbox-label">Confirmação de Presença: &nbsp; &nbsp; {{ form.attending.label }} {{ form.attending }} &nbsp; &nbsp; {{ form.not_attending.label }} {{ form.not_attending }}</label>
+        </div>
+
+        <div class="form-field checkbox-container hidesecond">
+            <label for="{{ form.attending.id_for_label }}" class="checkbox-label">Confirmação de Presença: <br> {{ form.attending.label }} {{ form.attending }} &nbsp; &nbsp; &nbsp; {{ form.not_attending.label }} {{ form.not_attending }}</label>
         </div>
 
         <!-- Other Fields -->

@@ -423,6 +423,14 @@ body {
     font-weight: bold;
 }
 
+.hidefirst{
+    display: block;
+}
+
+.hidesecond{
+    display: none;
+}
+
 @media screen and (max-width: 1500px) {
     .rsvp-form-container {
         width: 40%; /* Wider width on smaller screens */
@@ -445,6 +453,16 @@ body {
 @media screen and (max-width: 600px) {
     .rsvp-form-container {
         width: 90%; /* Wider width on smaller screens */
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .hidefirst{
+        display: none !important;
+    }
+    
+    .hidesecond{
+        display: block !important;
     }
 }
 
