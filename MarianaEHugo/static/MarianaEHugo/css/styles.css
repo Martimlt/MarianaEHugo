@@ -1,6 +1,10 @@
 body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Quicksand', sans-serif;
     margin: 0;
+}
+
+h1 {
+    font-family: 'Forum', serif;
 }
   
 .active {
@@ -20,8 +24,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Ensures that the topbar stretches across the full width of the viewport */
-    z-index: 1000; /* Ensures that the topbar is above other content */
+    width: 100%;
+    z-index: 1000; 
 }
 
 .logo {
@@ -100,24 +104,24 @@ body {
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white; /* or any color that suits your design */
+    color: white; 
+    text-align: center;
 }
 
 .centered-title {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: 'Playfair Display', serif;
     font-size: 100px;
     margin: 0px;
     color: white;
+    width: 90%
 }
 
 .centered-subtitle {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: 'Playfair Display', serif;
     font-size: 30px;
     margin: 12px;
     color: white;
@@ -126,13 +130,13 @@ body {
 /* Date */
 
 .centered-text {
-    display: flex; /* Enables flexbox */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 .big-text {
-    font-size: 60px; /* Increase the font size, adjust as needed */
+    font-size: 60px; 
     text-align: center;
 }
 
@@ -182,18 +186,26 @@ body {
 
 /* Image and description */
 
+.title-desc{
+    text-align: center;
+    font-size: 40px;
+    margin: 5px;
+}
+
 .box1 {
     display: flex;
     align-items: stretch;
     width: 50%; 
     margin: auto; 
     padding: 20px; 
+    text-align: center;
 }
 
 .text-section {
     flex: 1; 
     background-color: #AC9362; 
     display: flex; 
+    flex-direction: column;
     align-items: center; 
     justify-content: center; 
     padding: 20px; 
@@ -215,7 +227,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 50px 400px;
+    padding: 50px 300px;
 }
 
 .box {
@@ -247,17 +259,17 @@ body {
     margin: 0;
 }
 
-@media screen and (max-width: 820px) { /* Adjust the 800px to suit your needs */
+@media screen and (max-width: 820px) {
     .boxes-container {
         flex-direction: column;
-        padding: 50px 100px; /* Adjust padding for smaller screens */
+        padding: 50px 100px;
     }
 }
 
-@media screen and (max-width: 600px) { /* Adjust the 800px to suit your needs */
+@media screen and (max-width: 600px) {
     .boxes-container {
         flex-direction: column;
-        padding: 50px 20px; /* Adjust padding for smaller screens */
+        padding: 50px 20px;
     }
 }
 
@@ -360,9 +372,9 @@ body {
     padding: 20px;
     border: 1px solid #AC9362;
     border-radius: 10px;
-    width: 30%; /* Adjust the width as needed */
+    width: 30%;
     background-color: #f2f2f2;
-    box-sizing: border-box; /* Include padding and border in the width */
+    box-sizing: border-box;
 }
 
 .rsvp-form-container form {
@@ -374,12 +386,12 @@ body {
 .rsvp-form-container input[type="text"],
 .rsvp-form-container input[type="email"],
 .rsvp-form-container textarea {
-    width: 100%; /* Full width of the parent container */
+    width: 100%;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #AC9362;
-    box-sizing: border-box; /* Include padding and border in the width */
+    box-sizing: border-box;
 }
 
 .rsvp-form-container button {
@@ -390,7 +402,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    width: 100%; /* Full width */
+    width: 100%;
 }
 
 .rsvp-form-container button:hover {

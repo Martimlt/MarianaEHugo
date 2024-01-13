@@ -10,8 +10,8 @@
     </div>
 
     <div class="hero-titles">
-        <h2 class="centered-title">Mariana & Hugo</h2>
-        <h3 class="centered-subtitle">O Grande Dia!</h3>
+        <img class="centered-title" src="{% static 'MarianaEHugo/images/hero-image-beggining.png' %}" alt="Logo">
+        <h1 class="centered-subtitle">O Grande Dia!</h1>
     </div>
 
     <button id="prevBtn" class="nav-btn">❮</button>
@@ -30,7 +30,12 @@
 </div>
 <div class="box1">
     <div class="text-section">
-        <p>Your text goes here. This is the left side of the box.</p>
+        <h1 class="title-desc">A Nossa História</h1>
+        <p>Numa noite de festa do caracol no Jerumelo, trocamos olhares sem imaginar que ali começava uma bonita história de amor.</p>
+        <p>A detetive Mariana pos mãos à obra e procurou falar com aquele rapaz nos dias seguintes, o que isso levou ao que podemos chamar de um pseudo pedido de namoro. A pergunta foi simples: 'O que queres ser?' e a resposta, direta: 'Tua namorada.'</p>
+        <p>Agora, após 10 anos repletos de risos, desafios e crescimento mútuo, celebramos não apenas essa década de amor, mas também um novo capítulo, desta vez com direito a um jantar romântico com vista para o mar.</p>
+        <p>Este dia especial reflete a nossa história única, e mal podemos esperar para os próximos capítulos juntos.</p>
+        <p>Este dia é especial, porque podemos comemorar o nosso amor com todos os que nos querem bem, amigos e família. Obrigado por fazerem parte das nossas vidas.</p>
     </div>
     <div class="image-section">
         <img src="{% static 'MarianaEHugo/images/Image4.jpg' %}" alt="Your Image Description">
@@ -53,7 +58,7 @@
     </div>
 </div>
 <div class="gifts-section">
-    <h2 class="gifts-title">Prendas</h2>
+    <h1 class="gifts-title">Prendas</h1>
     <p class="gifts-text">
         Caros amigos e familiares,
     </p>
@@ -71,7 +76,7 @@
 
 </div>
 <div class="rsvp-form-container">
-    <h1>Confirme sua Presença</h1>
+    <h1>Confirme a sua Presença</h1>
     {% if success %}
         <p>Obrigado por confirmar sua presença!</p>
     {% endif %}
@@ -110,6 +115,6 @@
     <h1 class="title-cont">Contacto</h1>
     <p class="cont-text">Caso necessite de alguma informação, não hesite em contactar!</p>
     <p class="cont-text" style="margin-bottom: 0px;">Mariana: +351 931 355 012</p>
-    <p class="cont-text" style="margin-top: 0px; padding-bottom: 20px;">Hugo: +351 XXX XXX XXX</p>
+    <p class="cont-text" style="margin-top: 0px; padding-bottom: 20px;">Hugo: +351 917 657 197</p>
 </div>
 {% endblock %}
